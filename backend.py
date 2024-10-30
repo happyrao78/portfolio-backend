@@ -6,7 +6,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-CORS(app)  # This will enable CORS for all routes
+CORS(app, resources={r"/api/*": {"origins": "https://www.happyrao.tech"}})  # This will enable CORS for all routes
 
 # Load environment variables from .env file
 load_dotenv()
