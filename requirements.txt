@@ -1,8 +1,6 @@
-pip>=24.3.1
-setuptools>=65.5.0
-fitz
-flask
-flask_cors
-dotenv
+Flask
+Flask-CORS
+python-dotenv
 requests
 gunicorn
+PyMuPDF
