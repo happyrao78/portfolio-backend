@@ -4,3 +4,4 @@ python-dotenv
 requests
 gunicorn
 PyMuPDF
+google-generativeai
