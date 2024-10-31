@@ -6,7 +6,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "https://www.happyrao.tech"}})  # This will enable CORS for all routes
+CORS(app, resources={r"/api/*": {"origins": ["https://www.happyrao.tech","http://localhost:3000"]}})  # This will enable CORS for all routes
 
 # Load environment variables from .env file
 load_dotenv()
@@ -19,8 +19,8 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Path to the PDF and text files
-PDF_FILE = r"C:\Users\Happy yadav\Desktop\New folder\happy.pdf"
-TEXT_FILE = r"C:\Users\Happy yadav\Desktop\New folder\happy.txt"
+PDF_FILE = "./happy.pdf"
+TEXT_FILE = "./happy.txt"
 
 def extract_text_from_pdf(pdf_file, text_file):
     """Extract text from a PDF file and save it to a text file."""
