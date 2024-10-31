@@ -41,7 +41,7 @@ def extract_text_from_pdf(pdf_file, text_file):
 def get_text_from_txt(text_file):
     """Read text from a text file."""
     try:
-        with open(text_file, "r") as file:
+        with open(text_file, "r", encoding="utf-8", errors="replace") as file:
             return file.read()
     except Exception as e:
         print(f"Error reading {text_file}: {e}")
